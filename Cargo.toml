@@ -8,7 +8,7 @@ readme="README.md"
 description="3DS save file decompressor"
 homepage="https://github.com/chrom-sevy/festy"
 repository="https://github.com/chrom-sevy/festy"
-keywords=["3ds", "save file", "save", "decompression", "compression"]
+keywords=["3ds", "file", "save", "decompression", "compression"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
