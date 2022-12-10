@@ -11,11 +11,16 @@ Just make sure to not have too many files in your save directory, as the game wi
 ## Rust
 
 ```rust
-use festy::huffman;
+use festy;
 
 fn main() {
+    // read a file into a buffer
     let file_buffer = std::fs::read("chapter0").unwrap();
-    let file_buffer = huffman::decompress(file_decrypted).unwrap();
+
+    // decompress the file_buffer and return the decompressed buffer
+    let file_buffer = festy::file::decompress(file_decrypted).unwrap();
+
+    // write the buffer to a file
     std::fs::write_to_file("chapter0_dec", &file_buffer).unwrap();
 }
 
