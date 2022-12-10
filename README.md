@@ -14,11 +14,11 @@ Just make sure to not have too many files in your save directory, as the game wi
 use festy;
 
 fn main() {
-    // read a file into a buffer
-    let file_decrypted = std::fs::read("chapter0").unwrap();
+    // read an encrypted/compressed file into a buffer
+    let file_encrypted = std::fs::read("chapter0").unwrap();
 
     // decompress the file_buffer and return the decompressed buffer
-    let file_buffer = festy::file::decompress(file_decrypted).unwrap();
+    let file_buffer = festy::file::decompres(file_encrypted).unwrap();
 
     // write the buffer to a file
     std::fs::write_to_file("chapter0_dec", &file_buffer).unwrap();
