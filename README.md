@@ -15,7 +15,7 @@ use festy;
 
 fn main() {
     // read a file into a buffer
-    let file_buffer = std::fs::read("chapter0").unwrap();
+    let file_decrypted = std::fs::read("chapter0").unwrap();
 
     // decompress the file_buffer and return the decompressed buffer
     let file_buffer = festy::file::decompress(file_decrypted).unwrap();
