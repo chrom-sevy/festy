@@ -6,9 +6,18 @@ As of now, the compression is not implemented as it doesn't appear to be a 100% 
 
 Just make sure to not have too many files in your save directory, as the game will almost certainly crash if it is too full.
 
-# Exampels
+# Examples
+
+## Rust
 
 ```rust
+use festy::huffman;
+
+fn main() {
+    let file_buffer = std::fs::read("chapter0").unwrap();
+    let file_buffer = huffman::decompress(file_decrypted).unwrap();
+    std::fs::write_to_file("chapter0_dec", &file_buffer).unwrap();
+}
 
 ```
 
